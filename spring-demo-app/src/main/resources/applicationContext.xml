@@ -7,17 +7,25 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <bean id="musicBean"
-          class="com.sawsoer.RapMusic">
-    </bean>
+    <context:component-scan base-package="com.sawsoer"/>
 
-    <bean id="musicPlayer"
-          class="com.sawsoer.MusicPlayer">
-        <property name="music" ref="musicBean"/>
-        <property name="playerName" value="${musicPlayer.playerName}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-        <property name="country" value="${musicPlayer.country}"/>
-    </bean>
+<!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+<!--    <bean id="musicBean"-->
+<!--          class="com.sawsoer.RapMusic"-->
+<!--          init-method="getInitMethod"-->
+<!--          destroy-method="getDestroyMethod">-->
+<!--    </bean>-->
+
+<!--    <bean id="musicPlayer"-->
+<!--          class="com.sawsoer.MusicPlayer"-->
+<!--          scope="prototype"-->
+<!--          init-method="getInitMethod"-->
+<!--          destroy-method="getDestroyMethod">-->
+
+<!--        <property name="music" ref="musicBean"/>-->
+<!--        <property name="playerName" value="${musicPlayer.playerName}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--        <property name="country" value="${musicPlayer.country}"/>-->
+<!--    </bean>-->
 
 </beans>
