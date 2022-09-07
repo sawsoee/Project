@@ -10,6 +10,10 @@ public class TestSpring {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
         Car car1 = context.getBean("car",Car.class);
+        IdmMusic idmMusic = context.getBean("idmMusic",IdmMusic.class);
+
+        idmMusic.setIdmEnum(IdmMusicEnum.XTAL);
+        car1.setModel("Dodge");
 
         System.out.println(car1);
 
