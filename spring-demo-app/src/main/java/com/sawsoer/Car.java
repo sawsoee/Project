@@ -11,15 +11,18 @@ public class Car {
     @Autowired
     public Car(MusicPlayer musicPlayer) {
         this.musicPlayer = musicPlayer;
-        this.model = "Audi";
     }
 
     public String getModel() {
         return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     @Override
     public String toString(){
-        return getModel() + musicPlayer.getMusic();
+        return "Model :" + getModel()+" " + musicPlayer.getMusic();
     }
 }
